@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Corriente Colectivo</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #121212;
+      color: #fff;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background-color: #272727;
+    }
+    nav a {
+      padding: 1rem;
+      color: #fff;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav a:hover {
+      background-color: #444;
+    }
+    section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #1f1f1f;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Corriente Colectivo</h1>
+    <p>Impulsando la expresión artística en todas sus formas</p>
+  </header>
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#redes">Redes</a>
+    <a href="#galeria">Galería</a>
+  </nav>
+
+  <section id="inicio">
+    <h2>Bienvenidos</h2>
+    <p>Corriente Colectivo es un espacio para creadores y soñadores. Apoyamos iniciativas artísticas que van desde la música, pintura, hasta el teatro callejero y todo lo que desafíe la monotonía.</p>
+  </section>
+
+  <section id="nosotros">
+    <h2>Nosotros</h2>
+    <p>Somos un colectivo multidisciplinario que busca visibilizar el talento local a través de colaboraciones, eventos y talleres. Nuestro enfoque es construir una red sólida de artistas que crean con pasión y compromiso social.</p>
+  </section>
+
+  <section id="redes">
+    <h2>Síguenos</h2>
+    <ul>
+      <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+    </ul>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería</h2>
+    <div class="gallery">
+      <img src="https://images.unsplash.com/photo-1549887534-4601e4cfd10d" alt="Arte callejero" />
+      <img src="https://images.unsplash.com/photo-1603570419986-015e8b31963b" alt="Pintura en proceso" />
+      <img src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4" alt="Ensayo musical" />
+      <img src="https://images.unsplash.com/photo-1608497501684-02c28d3b3c1b" alt="Teatro alternativo" />
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Corriente Colectivo - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    // Scroll suave al hacer clic en los enlaces del menú
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          window.scrollTo({
+            top: targetSection.offsetTop - 60,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
